@@ -1,0 +1,76 @@
+/* Estilo para el contenedor del menú */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  
+  /* Estilo para el botón del menú hamburguesa */
+  .menu-toggle {
+    position: fixed; /* Usa fixed para que el menú quede pegado a los bordes */
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100vh; /* Altura completa del viewport */
+    background-color: var(--colorContraste);    
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /*gura que el botón esté encima del menú */
+    cursor: pointer;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+  }
+
+  .menu-hamburguer{
+    width: 100%;
+    background-color: var(--colorContraste);    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+  }
+  
+  /* Estilo para el menú de navegación */
+  .nav-menu {
+    position: fixed; /* Usa fixed para que el menú quede pegado a los bordes */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; /* Altura completa del viewport */
+    background-color: var(--colorContraste);    color: white;
+    transform: translateX(-100%); /* Inicialmente oculto */
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de profundidad */
+    cursor: pointer;
+
+  }
+  
+  /* Mostrar el menú cuando está activo */
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+  
+  /* Estilo para la lista de navegación */
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo para cada elemento de la lista */
+  .nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.593);
+  }
+  
+  /* Estilo para los enlaces */
+  .nav-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-menu a:hover {
+    background-color: #adcdee;
+  }
+  

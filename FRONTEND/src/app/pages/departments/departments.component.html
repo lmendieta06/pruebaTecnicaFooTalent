@@ -1,0 +1,50 @@
+<header>
+    <app-navigation (menuToggle)="onMenuToggle($event)"></app-navigation>
+</header>
+<main [ngClass]="{'menu-open': isMenuOpen}">
+    <h1 class="departmentsText">DEPARTAMENTOS</h1>
+    <section class="containerTabla">
+        <div class="containerBtns">
+            <button (click)="addDepartmentModal()" class="peticionesBtn">
+                <i class="bi bi-plus"></i>
+                NUEVO
+            </button>
+        </div>
+        <div class="tablaProductos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>CODIGO</th>
+                        <th>DEPARTAMENTO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let department of departments" class="departments">
+                        <td class="tdContenido">
+                            <p>{{department.codigo}}</p>
+                        </td>
+                        <td class="tdContenido">
+                            <p>{{department.nombre}}</p>
+                        </td>
+                        <td class="tdContenido actions">
+                            <button (click)="updateDepartmentModal(department)" class="updateButton">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button (click)="deleteDepartment(department._id)" class="deleteButton">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section *ngIf="addDepartment">
+        <app-add-department [isVisible]="addDepartment" [closeModal]="closeModal.bind(this)"></app-add-department>
+    </section>
+    <section *ngIf="updateDepartment">
+        <app-update-department [isVisible]="updateDepartment" [departmentUpdate]="department" [closeModal]="closeModal.bind(this)"></app-update-department>
+    </section>
+</main>

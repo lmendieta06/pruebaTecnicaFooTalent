@@ -1,0 +1,28 @@
+/* Importaciones */
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+/* font-family: 'Playfair Display', sans-serif; */
+
+/* Variables */
+:root{
+    --tipografiaTitulos: 'Playfair Display', sans-serif;
+    --tipografiaTextos: 'Montserrat', sans-serif;
+
+    --colorFondo : rgb(244, 244, 244);
+    --colorContraste: #A7C7E7;
+    --colorRosa: #FADADD;
+    --colorTextos: #4A4A4A;
+    --colorBotones: #F9F8BB;
+    --colorContraste2: #A8E6CF;
+    --colorFiltro: #D8BFD8;
+}
+
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Hace que se respeten las medidas que quiero dar */
+    box-sizing: border-box;
+}

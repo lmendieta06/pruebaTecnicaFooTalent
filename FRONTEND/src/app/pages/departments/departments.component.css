@@ -1,0 +1,151 @@
+/* El main ocupará el resto del espacio */
+main {
+    transition: margin-left 0.3s ease;
+    margin-left: 50px; /* Valor cuando el menú está cerrado */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main.menu-open {
+    margin-left: 250px; /* Espacio reservado cuando el menú está abierto */
+}
+
+.departmentsText{
+    width: 90%;
+    text-align: center;
+    color: var(--colorRosa);
+    font-family: var(--tipografiaTitulos);
+    font-size: 50px;
+    overflow-y: hidden;
+}
+
+/* TABLA */
+
+.containerTabla{
+    overflow-y: visible;
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerTabla div{
+    width: 100%;
+}
+
+/* BOTONES */
+
+.containerBtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 20px;
+
+}
+.containerTabla a{
+    width: 25%;
+    text-decoration: none;
+}
+
+.peticionesBtn{
+    width: 20%;
+    height: 40px;
+    background-color: var(--colorFiltro);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--tipografiaTextos);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* TABLA */
+.containerTabla table{
+    width: 100%;
+    /* HACER QUE LOS BORDES DE CADA ELEMENTO SE COMBINEN CON LAS DEL LADO Y ASI SE MUESTRE SOLO UN BORDE */
+    border-collapse: collapse;
+    border-bottom: 100px;
+}
+
+.tablaProductos{
+    border-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+
+.departments{
+    height: 40px;
+}
+
+.td{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+th, td {
+    border: 1px solid #dddddda5;
+    padding: 8px;
+    text-align: left;
+    font-family: var(--colorTextos);
+}
+
+th {
+    background-color: var(--colorContraste);
+    color: white;
+    text-align: center;
+
+}
+
+.tdContenido{
+    text-align: center;
+}
+
+td img{
+    width: 150px;
+    height: 150px;
+}
+
+.actions {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.deleteButton{
+    background-color: rgb(234, 96, 96);
+    color: white;
+}
+
+.updateButton{
+    background-color: var(--colorFiltro);
+    color: white;
+}

@@ -1,0 +1,11 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Para que los elementos hijos se alineen verticalmente */
+}
+
+header {
+    height: 100%; /* O un valor específico si prefieres */
+    width: 100%; /* Asegúrate de que ocupe el ancho completo */
+}

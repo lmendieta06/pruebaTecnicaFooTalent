@@ -1,0 +1,40 @@
+<section class="addEmployee">
+    <div class="container">
+      <span class="close" (click)="closeModal()"> &times;</span>
+      <div class="containerForms">
+        <h1>AGREGAR EMPLEADO</h1>
+        <h2>Complete todos los campos solicitados</h2>
+        <div>
+          <div>
+            <label for="nombre">Nombres</label>
+            <input type="text" placeholder="Ingrese sus nombres" name="nombre" required class="form-control" [(ngModel)]="nombre">
+          </div>
+          <div>
+            <label for="apellido1">Primer Apellido</label>
+            <input type="text" placeholder="Ingrese su primer Apellido" name="apellido1" required class="form-control" [(ngModel)]="apellido1">
+          </div>
+          <div>
+            <label for="apellido2">Segundo Apellido</label>
+            <input type="text" placeholder="Ingrese su segundo Apellido" name="apellido2" required class="form-control" [(ngModel)]="apellido2">
+          </div>
+          <div>
+            <label for="codigo">Código</label>
+            <input type="number" placeholder="Ingrese su código" name="codigo" required class="form-control" [(ngModel)]="codigo">
+          </div>
+          <div>
+            <label for="codigoDepartament">Departamento</label>
+            <select name="codigoDepartament" required class="form-control" [(ngModel)]="codigoDepartament">
+              <option value="" disabled>Seleccione una opción</option>
+              <option *ngFor="let department of departments" [value]="department._id">
+                {{ department.nombre }}
+              </option>
+            </select>
+          </div>
+          <div>
+            <button type="button" class="enviarForms" (click)="postEmployee()">AGREGAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  

@@ -27,7 +27,7 @@ export const getEmployees = async(req, res)=>{
             return res.status(201).json("No se encontraron empleados registrados");
         }
 
-        return res.status(200).json(employees);  // Devuelve la lista de empleados
+        return res.status(200).json(employees);  
     } catch (error) {
         return res.status(500).json({ error: error.message});
     }
@@ -41,7 +41,7 @@ export const updateEmployee = async(req, res)=>{
         const updatedEmployee = await employeeModel.findByIdAndUpdate(
             idUpdate,
             { nombre, apellido1, apellido2, codigoDepartamento },
-            { new: true }  // Devuelve el nuevo documento actualizado
+            { new: true }  
         );
 
         if (!updatedEmployee) {
