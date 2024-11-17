@@ -2,11 +2,15 @@
 main {
     transition: margin-left 0.3s ease;
     margin-left: 50px; /* Valor cuando el menú está cerrado */
-    padding: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 main.menu-open {
@@ -148,4 +152,33 @@ td img{
 
 .updateButton{
     background-color: var(--colorFiltro);
+}
+
+/* Responsive */
+
+@media screen and (max-width:690px){
+    main{
+        padding-left: 5px;
+        padding-right: 5px;
+        overflow-x: visible;
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width:600px){
+    .peticionesBtn{
+        width: 40%;
+    }
+    .employeesText{
+        width: 100%;
+        font-size: 30px;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:320px){
+    .peticionesBtn{
+        width: 90%;
+    }
+
 }

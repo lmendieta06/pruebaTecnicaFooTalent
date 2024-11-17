@@ -149,3 +149,24 @@ td img{
     background-color: var(--colorFiltro);
     color: white;
 }
+
+/* Responsive */
+
+@media screen and (max-width:690px){
+    main{
+        padding-left: 5px;
+        padding-right: 5px;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width:600px){
+    .peticionesBtn{
+        width: 40%;
+    }
+    .departmentsText{
+        width: 100%;
+        font-size: 30px;
+        overflow-x: hidden;
+    }
+}
